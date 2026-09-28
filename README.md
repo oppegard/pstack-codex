@@ -12,7 +12,7 @@ codex plugin marketplace add ColdTbrew/pstack-codex --ref main
 codex plugin add pstack-codex@pstack-codex
 git clone https://github.com/ColdTbrew/pstack-codex.git
 cd pstack-codex
-bash scripts/install-agents.sh
+bash scripts/install-agents.sh # https://github.com/openai/codex/issues/18308
 ```
 
 Start a new Codex task, press `$`, and choose **Poteto Mode**, or invoke it
@@ -34,7 +34,7 @@ for coordinator settings, review escalation, and mode composition.
 codex plugin marketplace upgrade pstack-codex
 codex plugin add pstack-codex@pstack-codex
 git pull --ff-only
-bash scripts/install-agents.sh
+bash scripts/install-agents.sh # https://github.com/openai/codex/issues/18308
 ```
 
 Start a new Codex task after updating.
