@@ -8,13 +8,13 @@ Use this policy when selecting pstack agents. Explicit user choices take precede
 | --- | --- | --- | --- |
 | Root coordinator | Current chat, start with Astra | `gpt-6-astra` | `medium` |
 | End-to-end delegated owner | `poteto_agent` | `gpt-6-astra` | `medium` |
-| Track sub-coordinator | General agent with an explicit track brief | `gpt-5.6-sol` | `medium` |
+| Track sub-coordinator | General agent with an explicit track brief | `gpt-6-sol` | `medium` |
 | Difficult implementation | `pstack_builder_astra` | `gpt-6-astra` | `medium` |
-| Scoped feature or bug fix | `pstack_builder_sol` | `gpt-5.6-sol` | `medium` |
+| Scoped feature or bug fix | `pstack_builder_sol` | `gpt-6-sol` | `medium` |
 | Exploration / alternative implementation | `pstack_explorer` / `pstack_builder_terra` | `gpt-5.6-terra` | `high` |
-| Mechanical implementation / coverage | `pstack_builder_luna` / `pstack_worker` | `gpt-5.6-luna` | `max` |
-| General independent review | `pstack_reviewer_sol` / `pstack_reviewer_terra` | `gpt-5.6-sol` / `gpt-5.6-terra` | `medium` / `high` |
-| Broad bounded review | `pstack_reviewer_luna` | `gpt-5.6-luna` | `max` |
+| Mechanical implementation / coverage | `pstack_builder_luna` / `pstack_worker` | `gpt-6-luna` | `max` |
+| General independent review | `pstack_reviewer_sol` / `pstack_reviewer_terra` | `gpt-6-sol` / `gpt-5.6-terra` | `medium` / `high` |
+| Broad bounded review | `pstack_reviewer_luna` | `gpt-6-luna` | `max` |
 | High-risk review / disputed findings | `pstack_reviewer_astra` | `gpt-6-astra` | `high` |
 | Comment review | `comment_sicko` | `gpt-5.6-terra` | `high` |
 
