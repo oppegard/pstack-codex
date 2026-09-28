@@ -27,7 +27,7 @@ Keep `gpt-5.6-sol-max` as a converter input and map it to `gpt-6-sol`. Add direc
 - [x] Phase B: Design the workflow.
 - [x] Phase C: Run the loop.
 - [x] Phase D: Keep the audit trail.
-- [ ] Phase E: Verify and hand back.
+- [x] Phase E: Verify and hand back.
 
 ## Execution units after approval
 
@@ -36,7 +36,7 @@ Keep `gpt-5.6-sol-max` as a converter input and map it to `gpt-6-sol`. Add direc
 - [x] Update five Sol and Luna TOMLs. Preserve four Terra TOMLs. Parse and install them into a temporary `CODEX_HOME` to inspect the copies.
 - [x] Update model routing. Verify that all profile references resolve and the routing table matches the TOMLs.
 - [x] Run the full artifact checks, inspect the diff, and review the local decision trail against evidence.
-- [ ] Commit with a Conventional Commit message, push the isolated branch, and open a ready PR on the fork with this plan and current checklist in an `Implementation Plan` details block.
+- [x] Commit with a Conventional Commit message, push the isolated branch, and open a ready PR on the fork with this plan and current checklist in an `Implementation Plan` details block.
 
 ## Skill edit gate
 
@@ -61,3 +61,5 @@ The routing table matches all twelve named profiles. Arena and Interrogate still
 - `git diff --check` passed. A diff against `main` showed no change to the four Terra TOMLs. A search found no active GPT-5.6 Sol or Luna ID under `plugins/pstack-codex`.
 
 An independent reviewer rechecked the decision trail and diff. The reviewer found no remaining verification or scope issue after the discoverable tests and installation check were added.
+
+The ready PR is https://github.com/oppegard/pstack-codex/pull/2. Its base is `main`, and the plan appears in the collapsed `Implementation Plan` section.
