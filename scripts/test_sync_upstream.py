@@ -14,6 +14,11 @@ class ModelConversionTest(unittest.TestCase):
                 "claude-opus-5-thinking-xhigh",
                 "gpt-5.6-sol-max",
                 "gpt-5.6-sol",
+                "gpt-6.0-sol-max",
+                "gpt-6-sol-max",
+                "gpt-6.0-sol",
+                "gpt-6-sol",
+                "gpt-6.1-sol",
                 "gpt-5.6-terra",
                 "gpt-5.6-luna",
             )
@@ -22,14 +27,21 @@ class ModelConversionTest(unittest.TestCase):
             (
                 "gpt-6-luna",
                 "gpt-6-luna",
-                "gpt-6-sol",
-                "gpt-6-sol",
+                "gpt-6.1-sol",
+                "gpt-6.1-sol",
                 "gpt-5.6-terra",
-                "gpt-6-sol",
-                "gpt-6-sol",
+                "gpt-6.1-sol",
+                "gpt-6.1-sol",
+                "gpt-6.1-sol",
+                "gpt-6.1-sol",
+                "gpt-6.1-sol",
+                "gpt-6.1-sol",
+                "gpt-6.1-sol",
                 "gpt-5.6-terra",
                 "gpt-6-luna",
             )
         )
 
-        self.assertEqual(transform_text(source, []), expected)
+        transformed = transform_text(source, [])
+        self.assertEqual(transformed, expected)
+        self.assertEqual(transform_text(transformed, []), transformed)
