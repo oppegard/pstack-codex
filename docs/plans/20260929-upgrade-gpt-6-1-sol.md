@@ -30,11 +30,11 @@ confirms `gpt-6.1-sol` and supports `medium`, which both Sol profiles use.
   - **Smallest safe decomposition.** If one worker is best, name why.
 - [x] Delegate code-writing using [model routing](../../plugins/pstack-codex/skills/poteto-mode/references/model-routing.md), matching the implementation profile to the task difficulty. Give it a specific scope: file paths, the named data shape and its organizing structure per **principle-model-the-domain**, and success criteria. Review its diff yourself. When implementation admits multiple valid shapes, use the **arena** skill so candidates surface alternatives and the cross-judge guards the pick. If nested spawning is unavailable, the current agent owns the diff directly; never return a standing-by response. Comments per **Comments**. Re-ground against source for upstream-derived files, port shared-primitive improvements to all consumers, and verify each.
 - [x] Verify on the matching surface. "Inconclusive" or wrong-surface is not a pass; flag it.
-- [ ] Rebase into small, ordered commits; stack follow-ups.
+- [x] Rebase into small, ordered commits; stack follow-ups.
   Use the **sequence-verifiable-units** principle skill, building, verifying, and committing each small unit before the next.
 - [x] If the design is contested, `interrogate` before shipping.
   skip: No contested design. Reconsider if review finds a design issue.
-- [ ] Run **Opening a PR**.
+- [x] Run **Opening a PR**.
 
 ## Throughput checkpoint
 
@@ -51,9 +51,9 @@ confirms `gpt-6.1-sol` and supports `medium`, which both Sol profiles use.
 - [x] Update existing converter and installation checks to expect GPT-6.1 Sol. Cover direct old Sol inputs and idempotent new inputs.
 - [x] Inspect conversion output, parse shipped TOMLs, and install into a temporary `CODEX_HOME` to read back actual copies. Check the diff and confirm unrelated model profiles are unchanged.
 - [x] Obtain independent review and resolve findings.
-- [ ] Commit with a Conventional Commit title of at most 50 characters and body lines of at most 72 characters. Push a topic branch and open a PR without merging.
-- [ ] Include this plan and its current checklist in a collapsed PR section titled `Implementation Plan`.
-- [ ] Provide post-merge plugin refresh, repository update, agent installation, and new-task instructions for each Codex home.
+- [x] Commit with a Conventional Commit title of at most 50 characters and body lines of at most 72 characters. Push a topic branch and open a PR without merging.
+- [x] Include this plan and its current checklist in a collapsed PR section titled `Implementation Plan`.
+- [x] Provide post-merge plugin refresh, repository update, agent installation, and new-task instructions for each Codex home.
 
 ## Definition of done
 
@@ -103,3 +103,8 @@ rg '^model =' "${CODEX_HOME:-$HOME/.codex}/agents/pstack_builder_sol.toml" "${CO
 ```
 
 The comment review found no actionable findings. No comments or suppressions were added.
+
+The ready PR is https://github.com/oppegard/pstack-codex/pull/3. Its base is `main`.
+The implementation is committed and pushed. This final plan update records
+completion in a separate documentation commit. The PR includes the current
+plan in its collapsed `Implementation Plan` section. No merge was performed.
