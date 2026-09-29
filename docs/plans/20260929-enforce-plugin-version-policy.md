@@ -43,7 +43,7 @@ Code-coupled work (one feature, one migration) goes to a single owner with the c
 - [x] Verify stale/equal/decremented releases, content changes, additions/deletions/modes, manifest metadata changes, version-only changes, unrelated changes, and invalid version input.
 - [x] Run focused tests, actionlint, existing tests, and the version CLI on the actual PR tree. Obtain independent review and comment review.
 - [x] Commit, push, open a ready PR, and include the approved plan/checklist in an Implementation Plan details section.
-- [ ] Give exact manual steps to require the named check on main, require an up-to-date branch, and enforce protections for administrators. Verify the PR check reports before handback.
+- [x] Give exact manual steps to require the named check on main, require an up-to-date branch, and enforce protections for administrators. Verify the PR check reports before handback.
 
 ## Throughput checkpoint
 
@@ -129,5 +129,14 @@ unchanged plugin content after masking only the version value, with the
 release identity advanced from `0.15.0+codex.20260910010513` to
 `0.15.0+codex.20260929211516`. The worktree is clean after commit.
 
-GitHub Actions acceptance is pending. Repository settings remain unchanged.
+GitHub Actions acceptance passed at head `9e78048`. Both the synchronize
+and PR-edit runs reported `Plugin version policy` as successful. Repository
+settings remain unchanged.
 The manual setup procedure is in docs/RELEASING.md and the PR description.
+
+The successful run https://github.com/oppegard/pstack-codex/actions/runs/36632788276
+exercised the checker against GitHub's real merge candidate and passed all
+27 CLI fixtures on Linux. The final documentation commit records that
+evidence. The root will confirm the required check remains successful on
+the final head before handing back. The user still needs to configure
+strict branch protection and merge the PR.
