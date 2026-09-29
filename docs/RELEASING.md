@@ -48,35 +48,16 @@ The check permits an equal version when plugin content is unchanged. It
 rejects equal versions for changed content and lower versions for every PR.
 Invalid version formats and timestamps also fail.
 
-## Enable the GitHub merge gate
+## Keep branch protection enabled
 
-The `Plugin version policy` job runs on every pull request. It compares
-GitHub's tested merge commit with its first parent, the exact target branch
-tip represented in that candidate. Its result alone does not invalidate an
-older successful run when `main` moves. Enable strict branch protection to
-close that race.
+Require pull requests, the `Plugin version policy` check, and branches that
+are up to date before merging into `main`. Apply these requirements to
+administrators too, with no bypass. Keep force pushes and deletions disabled.
 
-After the PR's workflow has reported a successful `Plugin version policy`
-check, configure this repository manually:
-
-1. Open **Settings**, then **Branches**.
-2. Under **Branch protection rules**, select **Add classic branch protection rule**.
-3. Set **Branch name pattern** to `main`.
-4. Enable **Require a pull request before merging**. An approval requirement is optional.
-5. Enable **Require status checks to pass before merging**.
-6. Add `Plugin version policy` as a required check. Select GitHub Actions as its expected source when that option is available.
-7. Enable **Require branches to be up to date before merging**.
-8. Enable **Do not allow bypassing the above settings** to apply the rule to administrators too.
-9. Leave force pushes and deletions disabled, then create the rule.
-10. Merge the policy PR after its required check passes.
-
-If the check is not available in the picker yet, wait for its first workflow
-run. These settings are separate from the repository files and need a
-repository administrator. The PR does not change GitHub settings.
-
-Verify that an outdated PR is blocked until its branch is updated and the
-check passes against the new merge candidate. Resolve a manifest conflict
-with a release identifier newer than the current target branch.
+The check compares GitHub's tested merge commit with its target branch tip.
+The up-to-date requirement forces another check when that target advances.
+Together, these protections prevent an older PR from restoring an earlier
+version after another release merges.
 
 See [GitHub's branch protection instructions](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
 and [strict required checks](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging).
