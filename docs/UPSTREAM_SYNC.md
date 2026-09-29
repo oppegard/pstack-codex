@@ -68,6 +68,10 @@ This validates the candidate, replaces `plugins/pstack-codex`, and advances
 
 ## 5. Validate, install, and publish
 
+Follow [the release procedure](RELEASING.md) to validate the candidate version
+against the current target branch before publishing. Upstream staging creates
+a timestamp, but another release may have merged after staging.
+
 ```bash
 uv run python ~/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py \
   plugins/pstack-codex
