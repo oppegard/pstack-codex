@@ -1,12 +1,12 @@
 {
   "name": "pstack-codex",
-  "version": "0.15.0+codex.20260929211516",
+  "version": "0.15.0+codex.20260929221339",
   "description": "A Codex-native port of pstack's rigorous engineering workflows, principles, and multi-agent playbooks.",
   "author": {
     "name": "Lauren Tan; Codex port by seunghyuk-DQ"
   },
-  "homepage": "https://github.com/ColdTbrew/pstack-codex",
-  "repository": "https://github.com/ColdTbrew/pstack-codex",
+  "homepage": "https://github.com/oppegard/pstack-codex",
+  "repository": "https://github.com/oppegard/pstack-codex",
   "license": "MIT",
   "keywords": [
     "pstack",
@@ -27,7 +27,7 @@
       "Write",
       "Multi-agent"
     ],
-    "websiteURL": "https://github.com/ColdTbrew/pstack-codex",
+    "websiteURL": "https://github.com/oppegard/pstack-codex",
     "defaultPrompt": [
       "$pstack-codex:poteto-mode investigate, implement, and verify this task.",
       "$pstack-codex:interrogate run an adversarial review of the current diff.",
