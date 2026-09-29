@@ -42,7 +42,7 @@ Code-coupled work (one feature, one migration) goes to a single owner with the c
 - [x] Record the policy in docs/RELEASING.md and a root AGENTS.md pointer. Link upstream publication instructions to the general policy.
 - [x] Verify stale/equal/decremented releases, content changes, additions/deletions/modes, manifest metadata changes, version-only changes, unrelated changes, and invalid version input.
 - [x] Run focused tests, actionlint, existing tests, and the version CLI on the actual PR tree. Obtain independent review and comment review.
-- [ ] Commit, push, open a ready PR, and include the approved plan/checklist in an Implementation Plan details section.
+- [x] Commit, push, open a ready PR, and include the approved plan/checklist in an Implementation Plan details section.
 - [ ] Give exact manual steps to require the named check on main, require an up-to-date branch, and enforce protections for administrators. Verify the PR check reports before handback.
 
 ## Throughput checkpoint
@@ -120,3 +120,14 @@ selected subprocess checks against real Git commits. Independent design
 exploration selected a snapshot map. Exclusive file ownership separated code
 and documentation writers. The current port identifier is
 `0.15.0+codex.20260929211516`.
+
+## PR delivery
+
+The ready PR is https://github.com/oppegard/pstack-codex/pull/4. The committed
+checker passed against fetched origin/main and the actual PR head. It found
+unchanged plugin content after masking only the version value, with the
+release identity advanced from `0.15.0+codex.20260910010513` to
+`0.15.0+codex.20260929211516`. The worktree is clean after commit.
+
+GitHub Actions acceptance is pending. Repository settings remain unchanged.
+The manual setup procedure is in docs/RELEASING.md and the PR description.
