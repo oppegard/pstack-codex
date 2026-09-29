@@ -426,9 +426,9 @@ def build_candidate(source: Path, candidate: Path, version: str, changed: bool) 
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     if changed:
         manifest["version"] = f"{version}+codex.{cachebuster()}"
-    manifest["homepage"] = "https://github.com/ColdTbrew/pstack-codex"
-    manifest["repository"] = "https://github.com/ColdTbrew/pstack-codex"
-    manifest["interface"]["websiteURL"] = "https://github.com/ColdTbrew/pstack-codex"
+    manifest["homepage"] = "https://github.com/oppegard/pstack-codex"
+    manifest["repository"] = "https://github.com/oppegard/pstack-codex"
+    manifest["interface"]["websiteURL"] = "https://github.com/oppegard/pstack-codex"
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     notes = candidate / "CODEX_PORT.md"

@@ -8,9 +8,9 @@ marketplace plugin and provides matching Codex custom-agent profiles.
 ## Install
 
 ```bash
-codex plugin marketplace add ColdTbrew/pstack-codex --ref main
+codex plugin marketplace add oppegard/pstack-codex --ref main
 codex plugin add pstack-codex@pstack-codex
-git clone https://github.com/ColdTbrew/pstack-codex.git
+git clone https://github.com/oppegard/pstack-codex.git
 cd pstack-codex
 bash scripts/install-agents.sh # https://github.com/openai/codex/issues/18308
 ```
@@ -30,10 +30,23 @@ for coordinator settings, review escalation, and mode composition.
 
 ## Update an installation
 
+Marketplace upgrades refresh the configured source. Check the
+`marketplaces.pstack-codex.source` value in `~/.codex/config.toml`, or in
+`$CODEX_HOME/config.toml` if you set `CODEX_HOME`. If it does not point to
+`oppegard/pstack-codex`, replace that source first:
+
 ```bash
+codex plugin marketplace remove pstack-codex
+codex plugin marketplace add oppegard/pstack-codex --ref main
+```
+
+From your `oppegard/pstack-codex` clone, run:
+
+```bash
+git switch main
+git pull --ff-only
 codex plugin marketplace upgrade pstack-codex
 codex plugin add pstack-codex@pstack-codex
-git pull --ff-only
 bash scripts/install-agents.sh # https://github.com/openai/codex/issues/18308
 ```
 

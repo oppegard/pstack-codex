@@ -30,6 +30,6 @@ under `upstream-cursor-only/` for provenance but are not registered in Codex.
 See `CODEX_PORT.md` for the runtime mapping.
 
 The public source, installation instructions, and upstream update workflow are
-maintained at <https://github.com/ColdTbrew/pstack-codex>.
+maintained at <https://github.com/oppegard/pstack-codex>.
 
 Original pstack is by Lauren Tan and distributed under the MIT license.
